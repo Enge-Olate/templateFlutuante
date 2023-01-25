@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+	<html lang = "pt-br">
+		<head>
+			<title>Templates de CSS</title>
+				<meta charset = "utf-8">
+				<meta name ="viewport" content = "width = device-width, initial-scale = 1">
+		</head>
+			<style>
+				/*Aplicando estilo de borda em todas as caixas de conteúdo*/	
+				*{
+					box-sizing : border-box;
+				}
+				/*Aplicando estilo de letras a todo corpo da página*/	
+				body{
+					font-family : Arial, Helvetica, sans-serif;
+				}
+				/*Aplicando estilo ao cabeçalho*/
+				.cabecalho{
+					background-color : #f1f1f1;
+					padding : 30px;
+					text-align : center;		
+					font-size : 35px;
+				}
+				/*Aplicando estilo as colunas*/
+				.coluna1{
+					float : left;
+					width : 33.33%;
+					padding : 10px;
+					height : 300px;
+					background-color : #aaa;
+				}
+				.coluna2{
+					float : left;
+					width : 33.33%;
+					padding : 10px;
+					height : 300px;
+					background-color : #bbb;
+				}
+				.coluna3{
+					float : left;
+					width : 33.33%;
+					padding : 10px;
+					height : 300px;
+					background-color : #ccc;
+				}
+				/*fim estilo das colunas*/
+				/*Aplicando estilo a fileira*/
+				.fileirasColunas:after{
+					content : "";
+					display : table;
+					clear : both;					
+				}
+				.rodape{
+					text-align : center;
+					padding : 10px;
+					background-color : #f3f3f3;
+				}
+				@media(max-width : 600px){
+					.coluna1{
+						width : 100%;
+					}
+					.coluna2{
+						width : 100%;
+					}
+					.coluna3{
+						width : 100%;
+					}
+
+	
+				}		
+			</style>
+				<body>
+					<div class = "cabecalho">
+						<h1>Curriculum</h1>	
+					</div>
+						<div class = "fileirasColunas">
+							<div class = "coluna1">Sobre Mim</div>
+							<div class = "coluna2">Experiencia Profissional</div>
+							<div class = "coluna3">Educação</div>
+						</div>
+							<footer>
+								<div class = "rodape">
+									<h4>Endereço/Contatos</h4>
+								</div>
+							</footer>							
+				</body>
+	</html>
